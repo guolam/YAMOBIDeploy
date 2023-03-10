@@ -29,7 +29,9 @@ Route::middleware('auth')->group(function () {
     Route::post('tweet/{tweet}/unfavorites', [FavoriteController::class, 'destroy'])->name('unfavorites');
     Route::get('/tweet/mypage', [TweetController::class, 'mydata'])->name('tweet.mypage');
     Route::resource('tweet', TweetController::class);
+    
 });
+
 
 
 Route::get('/', function () {

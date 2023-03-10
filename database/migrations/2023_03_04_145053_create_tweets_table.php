@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('tweets', function (Blueprint $table) {
             $table->id();
             $table->string('tweet');
-      $table->text('description')->nullable();
+            $table->text('description')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -1,5 +1,3 @@
-<!-- resources/views/layouts/navigation.blade.php -->
-
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
   <!-- Primary Navigation Menu -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -8,7 +6,7 @@
         <!-- Logo -->
         <div class="shrink-0 flex items-center">
           <a href="{{ route('dashboard') }}">
-            <!--<x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />-->
+            <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
           </a>
         </div>
 
@@ -30,24 +28,7 @@
             {{ __('Create') }}
           </x-nav-link>
         </div>
-        <!-- 🔽 マイページへのリンクを追加 -->
-        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-          <x-nav-link :href="route('tweet.mypage')" :active="request()->routeIs('tweet.mypage')">
-            {{ __('Mypage') }}
-          </x-nav-link>
-        </div>
-        <!-- 🔽 タイムラインへのリンクを追加 -->
-        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-          <x-nav-link :href="route('tweet.timeline')" :active="request()->routeIs('tweet.timeline')">
-            {{ __('Timeline') }}
-          </x-nav-link>
-        </div>
-        <!-- 🔽 検索画面へのリンクを追加 -->
-        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-          <x-nav-link :href="route('search.input')" :active="request()->routeIs('search.input')">
-            {{ __('Search') }}
-          </x-nav-link>
-        </div>
+
       </div>
 
       <!-- Settings Dropdown -->
@@ -112,24 +93,6 @@
     <div class="pt-2 pb-3 space-y-1">
       <x-responsive-nav-link :href="route('tweet.create')" :active="request()->routeIs('tweet.create')">
         {{ __('Create') }}
-      </x-responsive-nav-link>
-    </div>
-    <!-- 🔽 マイページへのリンクを追加 -->
-    <div class="pt-2 pb-3 space-y-1">
-      <x-responsive-nav-link :href="route('tweet.mypage')" :active="request()->routeIs('tweet.mypage')">
-        {{ __('Mypage') }}
-      </x-responsive-nav-link>
-    </div>
-    <!-- 🔽 タイムラインへのリンクを追加 -->
-    <div class="pt-2 pb-3 space-y-1">
-      <x-responsive-nav-link :href="route('tweet.timeline')" :active="request()->routeIs('tweet.timeline')">
-        {{ __('Timeline') }}
-      </x-responsive-nav-link>
-    </div>
-    <!-- 🔽 検索画面へのリンクを追加 -->
-    <div class="pt-2 pb-3 space-y-1">
-      <x-responsive-nav-link :href="route('search.input')" :active="request()->routeIs('search.input')">
-        {{ __('Search') }}
       </x-responsive-nav-link>
     </div>
 
